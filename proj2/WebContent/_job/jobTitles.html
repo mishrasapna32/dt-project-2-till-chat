@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<style>
+div{ 
+color:black;
+background-color:white;
+opacity: 0.9;
+}
+h2{
+font-size:24px;
+color:lightblue;
+font-weight: bold;
+
+}
+
+
+	H1{
+	COLOR:WHITE;
+	
+	
+	}
+</style>
+</head>
+<br>
+<br>
+<br>
+
+<body>
+
+
+<table  class="table table-bordered">
+<tr>
+
+<th>Job Title</th>
+</tr>
+<tr ng-repeat="job in jobs">
+<td>
+<a href="" ng-click="getJobDetail(job.jobId)" >{{job.jobTitle}}</a>
+</td>
+</tr>
+</table>
+<div ng-show="showJobDetail">
+<B>Job Details</B> <BR>
+TITLE: 
+{{jobDetail.jobTitle}}<br>
+JOB DESCRIPTION: 
+{{jobDetail.jobDescription}}<br>
+SKILLS REQUIRED:
+{{jobDetail.skillsRequired}}<br>
+SALARY
+{{jobDetail.salary}}
+<br>
+LOCATION
+{{jobDetail.location}}<br>
+</div>
+<a href="#/home"> Home page</a>
+
+</body>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+
+
+<script type="text/javascript" src="_job/jobcontroller.js"></script>
+<script type="text/javascript" src="_job/jobservice.js"></script>
+
+</html>

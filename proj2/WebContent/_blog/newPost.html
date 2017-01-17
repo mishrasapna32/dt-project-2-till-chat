@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" />
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<style>
+table{ 
+color:black;
+background-color:white;
+opacity: 0.7;
+}
+h2{
+font-size:24px;
+color:lightblue;
+font-weight: bold;
+
+}
+
+	H1{
+	COLOR:WHITE;
+	
+	
+	}
+
+
+</style>
+</head>
+<body >
+<table >
+<br>
+<br>
+<tr><td>Enter the title</td><td><input type="text" ng-model="blogPost.title"></td></tr>
+
+
+<tr><td>Content</td><td><textarea rows="10"  ng-model="blogPost.body"></textarea></td></tr>
+<tr><td><input type="submit" ng-click="submit()"></td></tr>
+
+
+
+
+
+
+</table>
+</body>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="_blog/blogservice.js"></script>
+	<script type="text/javascript" src="_blog/blogcontroller.js"></script>
+	<script type="text/javascript" src="_blog/blogdetailcontroller.js"></script>
+</html>

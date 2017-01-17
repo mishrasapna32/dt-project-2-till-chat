@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+
+	H1{
+	COLOR:WHITE;
+	
+	
+	}
+</style>
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div >{{blogPost.title}}</div>
+            
+            <span><strong>by: </strong>{{blogPost.createdBy.username}}</span>
+            <span><strong>on: </strong>{{blogPost.createdOn | date:'medium'}}</span>
+          
+          </div>
+          <div class="panel-body">
+          {{blogPost.body}}
+          
+          </div>
+          </div>
+          </div>
+<a href="" ng-click="getComments(blogPost.id)" class="btn btn-default">Show Comments</a>
+<ul ng-show="showComments">
+<li ng-repeat="comment in comments" style="list-style: none;">
+<div>
+{{comment.body}}
+ <span><strong>by: </strong>{{comment.createdBy.username}}</span>
+            <span><strong>on: </strong>{{comment.createdOn | date:'medium'}}</span>
+</div>
+</li>
+
+</ul>
+
+</div>
+<div class="row">
+<form>
+<input type="text" ng-model="blogPost.id" hidden="true">
+<div class="col-sm-3 col-md-3 col-lg-2">
+<textarea required ng-model="comment.body"></textarea>
+<button ng-click="addComment()" class="btn btn-primary btn-block">Post Comment</button>
+</div>
+</form>
+</div>
+</body>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="_blog/blogservice.js"></script>
+	<script type="text/javascript" src="_blog/blogcontroller.js"></script>
+	<script type="text/javascript" src="_blog/blogdetailcontroller.js"></script>
+</html>
